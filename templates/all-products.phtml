@@ -1,0 +1,15 @@
+<section>
+    <h2>Tous les produits</h2>
+    <?php foreach($products as $product): ?>
+        <article>
+            <h3><?=htmlspecialchars(mb_strtoupper($product['title']));?></h3>
+            <?php if ($product['reservation_text']): ?>
+                <span>RESERVE</span>
+            <?php endif; ?>
+            <p><?=htmlspecialchars(mb_substr($product['description'],0,150));?></p>
+            <p><?=number_format($product['price']/100, 2, ',');?> €</p>
+            <p><?=htmlspecialchars($product['city']);?> <?=htmlspecialchars($product['postal_code']);?></p>
+            <a href="product.php?id=<?=intval($product['id_produit']);?>">Consultez le produit</a>
+        </article>
+    <?php endforeach; ?>
+</section>

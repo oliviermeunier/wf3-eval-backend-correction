@@ -1,0 +1,25 @@
+<form action="add-product.php" method="post">
+    <fieldset>
+        <div>
+            <label for="title">Titre</label>
+            <input type="text" id="title" name="title" value="">
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <textarea id="description" name="description"></textarea>
+        </div>
+        <div>
+            <label for="price">Prix</label>
+            <input type="number" step=".01" id="price" name="price" value="">
+        </div>
+        <div>
+            <label for="city">Ville</label>
+            <input type="text" id="city" name="city" value="">
+        </div>
+        <div>
+            <label for="postal-code">Code postal</label>
+            <input type="text" id="postal-code" name="postal-code" value="">
+        </div>
+        <input type="submit" value="Valider">
+    </fieldset>
+</form>
