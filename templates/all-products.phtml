@@ -9,7 +9,7 @@
             <p><?=htmlspecialchars(mb_substr($product['description'],0,150));?></p>
             <p><?=number_format($product['price']/100, 2, ',');?> €</p>
             <p><?=htmlspecialchars($product['city']);?> <?=htmlspecialchars($product['postal_code']);?></p>
-            <a href="product.php?id=<?=intval($product['id_produit']);?>">Consultez le produit</a>
+            <a href="/product?id=<?=intval($product['id_produit']);?>">Consultez le produit</a>
         </article>
     <?php endforeach; ?>
 </section>

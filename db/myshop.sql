@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 30, 2023 at 10:45 AM
+-- Generation Time: Jan 30, 2023 at 11:33 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -39,15 +39,6 @@ CREATE TABLE `produit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `produit`
---
-
-INSERT INTO `produit` (`id_produit`, `title`, `description`, `price`, `city`, `postal_code`, `reservation_text`, `created_at`) VALUES
-(2, 'tyjt', 'yjtyjetyj', 11, 'Paris', '49485', NULL, '2023-01-30 10:49:04'),
-(3, 'tyjtyj', 'tyjfgyjfgyj', 10000, 'Angers', '16320', 'Je souhaite réserver ce produit c\'est super top.', '2023-01-30 10:59:06'),
-(4, 'écrar', 'erte', 98700, 'ergerger', '98754', NULL, '2023-01-30 11:15:43');
-
---
 -- Indexes for dumped tables
 --
 
@@ -65,7 +56,7 @@ ALTER TABLE `produit`
 -- AUTO_INCREMENT for table `produit`
 --
 ALTER TABLE `produit`
-  MODIFY `id_produit` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_produit` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

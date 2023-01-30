@@ -12,7 +12,7 @@
         <h4>Message de réservation</h4>
         <p><?=htmlspecialchars($product['reservation_text']);?></p>
     <?php else: ?>
-        <form action="product.php?id=<?=intval($id);?>" method="POST">
+        <form action="/product?id=<?=intval($id);?>" method="POST">
             <div>
                 <label for="message">Message de réservation</label>
                 <textarea name="message"></textarea>
