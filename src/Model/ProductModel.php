@@ -35,13 +35,13 @@ class ProductModel extends AbstractModel {
         return $products;
    }
 
-   public function insert(string $title, string $description, int $price, string $city, string $postalCode)
+   public function insert(string $title, string $description, int $price, string $city, string $postalCode, string $image)
    {
         $sql = 'INSERT INTO produit 
-                (title, description, price, city, postal_code, created_at)
-                VALUES (?,?,?,?,?, NOW())';
+                (title, description, price, city, postal_code, created_at, image)
+                VALUES (?,?,?,?,?, NOW(), ?)';
         $pdoStatement = self::$pdo->prepare($sql);
-        $pdoStatement->execute([$title, $description, $price, $city, $postalCode]);
+        $pdoStatement->execute([$title, $description, $price, $city, $postalCode, $image]);
    }
 
    public function getOneById(int $id): ?array

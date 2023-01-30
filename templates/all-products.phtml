@@ -3,9 +3,17 @@
     <?php foreach($products as $product): ?>
         <article>
             <h3><?=htmlspecialchars(mb_strtoupper($product['title']));?></h3>
+            
             <?php if ($product['reservation_text']): ?>
                 <span>RESERVE</span>
             <?php endif; ?>
+
+            <?php if ($product['image']): ?>
+                <picture class="product-abstract-thumb">
+                    <img src="/images/<?=htmlspecialchars($product['image']);?>" alt="">
+                </picture>
+            <?php endif; ?>
+
             <p><?=htmlspecialchars(mb_substr($product['description'],0,150));?></p>
             <p><?=number_format($product['price']/100, 2, ',');?> €</p>
             <p><?=htmlspecialchars($product['city']);?> <?=htmlspecialchars($product['postal_code']);?></p>

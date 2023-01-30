@@ -1,5 +1,10 @@
 <article>
     <h3><?=htmlspecialchars(mb_strtoupper($product['title']));?></h3>
+    <?php if ($product['image']): ?>
+        <picture class="product-thumb">
+            <img src="/images/<?=htmlspecialchars($product['image']);?>" alt="">
+        </picture>
+    <?php endif; ?>
     <p><?=htmlspecialchars($product['description']);?></p>
     <p><?=number_format($product['price']/100, 2, ',');?> €</p>
     <p><?=htmlspecialchars($product['city']);?> <?=htmlspecialchars($product['postal_code']);?></p>
